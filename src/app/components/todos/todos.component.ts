@@ -7,6 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TodosComponent implements OnInit {
 
+  todoContent: string;
+  todos: string[] = [];
+
+  saveTodo() {
+    this.todos.push(this.todoContent);
+    this.todoContent = '';
+    console.log('asdasdsa')
+  }
+
   constructor() { }
 
   ngOnInit() {
